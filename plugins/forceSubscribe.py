@@ -72,7 +72,7 @@ def _check_member(client, message):
           sent_message.edit("❗ **saya bukan admin disini.**\n__Jadikan saya admin dengan izin Blokir Pengguna dan tambahkan saya lagi.\n`Leaving this chat...`__")
           client.leave_chat(chat_id)
       except ChatAdminRequired:
-        client.send_message(chat_id, text=f"❗ **Saya bukan admin di [channel]({channel_url})**\n__Jadikan saya admin di saluran dan tambahkan saya lagi.\n`Leaving this chat...`__")
+        client.send_message(chat_id, text=f"❗ **Saya bukan admin di channel tersebut**\n__Jadikan saya admin di saluran dan tambahkan saya lagi.\n`Leaving this chat...`__")
         client.leave_chat(chat_id)
 
 
