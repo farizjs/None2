@@ -105,9 +105,9 @@ def config(client, message):
               channel_url = client.export_chat_invite_link(int(input_str))
           else:
               channel_url = f"https://t.me/{input_str}"
-          message.reply_text(f"✅ **Paksa Berlangganan Diaktifkan**\n__Force Subscribe diaktifkan, semua anggota grup harus berlangganan di [channel]({channel_url}) untuk mengirim pesan di grup ini.__", disable_web_page_preview=True)
+          message.reply_text(f"✅ **Paksa Berlangganan Diaktifkan**\n__Force Subscribe diaktifkan, semua anggota grup harus berlangganan di channel tersebut untuk mengirim pesan di grup ini.__", disable_web_page_preview=True)
         except UserNotParticipant:
-          message.reply_text(f"❗ **Bukan Admin di Channel**\n__Saya bukan admin di [channel]({channel_url}). Tambahkan saya sebagai admin untuk mengaktifkan ForceSubscribe.__", disable_web_page_preview=True)
+          message.reply_text(f"❗ **Bukan Admin di Channel**\n__Saya bukan admin di channel tersebut. Tambahkan saya sebagai admin untuk mengaktifkan ForceSubscribe.__", disable_web_page_preview=True)
         except (UsernameNotOccupied, PeerIdInvalid):
           message.reply_text(f"❗ **Channel Username/ID Tidak valid.**")
         except Exception as err:
